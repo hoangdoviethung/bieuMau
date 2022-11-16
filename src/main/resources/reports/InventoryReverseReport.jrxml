@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.0.final using JasperReports Library version 6.20.0-2bc7ab61c56f459e8176eb05c7705e145cd400ad  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReverseReport" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="271e2c83-16a5-4eac-bc74-813dee9e28f8">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<property name="com.jaspersoft.studio.report.description" value=""/>
+	<subDataset name="Dataset1" uuid="e9198c25-88b0-410d-b5bf-a6a9fb5dc81a">
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+		<field name="menhGia" class="java.lang.String"/>
+		<field name="soTo" class="java.lang.String"/>
+		<field name="thanhTien" class="java.lang.String"/>
+	</subDataset>
+	<parameter name="logo" class="java.io.InputStream"/>
+	<parameter name="transactionT24" class="java.lang.String"/>
+	<parameter name="createDate" class="java.lang.String"/>
+	<parameter name="user" class="java.lang.String"/>
+	<parameter name="bangke" class="java.lang.String"/>
+	<parameter name="fullName" class="java.lang.String"/>
+	<parameter name="identifierNumber" class="java.lang.String"/>
+	<parameter name="address" class="java.lang.String"/>
+	<parameter name="detailOfPayment" class="java.lang.String"/>
+	<parameter name="phone" class="java.lang.String"/>
+	<parameter name="teller" class="java.lang.String"/>
+	<parameter name="nguoiNhan" class="java.lang.String"/>
+	<parameter name="coCode" class="java.lang.String"/>
+	<parameter name="tongCong" class="java.lang.String"/>
+	<parameter name="bangChuCai" class="java.lang.String"/>
+	<parameter name="ngayThang" class="java.lang.String"/>
+	<parameter name="listInventory" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<title>
+		<band height="81" splitType="Stretch">
+			<staticText>
+				<reportElement positionType="Float" x="316" y="0" width="50" height="20" uuid="a7f02dc0-be1a-407f-9814-f38df306e7ff"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Số GD:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="316" y="20" width="50" height="20" uuid="10f6a3ff-3b36-47ce-a77a-178a0646f706"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Ngày/giờ:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="316" y="40" width="50" height="20" uuid="eb18bd49-14ed-410c-b825-8463e8b2bef2"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="false"/>
+				</textElement>
+				<text><![CDATA[User:]]></text>
+			</staticText>
+			<textField>
+				<reportElement positionType="Float" x="366" y="0" width="188" height="20" isPrintWhenDetailOverflows="true" uuid="4f08a6c9-5699-474d-80ca-f5ae28c062a5"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($P{transactionT24}!=null && $P{transactionT24}.length()>0)?$P{transactionT24}:""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement positionType="Float" x="366" y="20" width="188" height="20" uuid="3be87985-9eab-4e3e-ad4f-8c2dcdb45d0d"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($P{createDate}!=null && $P{createDate}.length()>0)?$P{createDate}:""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement positionType="Float" x="366" y="40" width="188" height="20" uuid="7903b2df-e09c-49eb-86b0-089313f52260"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($P{user}!=null && $P{user}.length()>0)?$P{user}:""]]></textFieldExpression>
+			</textField>
+			<image onErrorType="Blank">
+				<reportElement positionType="Float" x="0" y="10" width="150" height="50" uuid="ad359cbd-5b81-4f8c-81bb-bcc77a02af68"/>
+				<imageExpression><![CDATA[$P{logo}]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement positionType="Float" stretchType="ElementGroupHeight" x="1" y="39" width="239" height="20" uuid="54622586-7994-4484-a0e2-64df4dd88542"/>
+				<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0">
+					<pen lineWidth="0.0" lineStyle="Double"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($P{coCode} != null && $P{coCode}.length()>0)?$P{coCode}:""]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<detail>
+		<band height="356" splitType="Stretch">
+			<staticText>
+				<reportElement positionType="Float" x="0" y="15" width="554" height="20" uuid="bb9e4e07-7a4e-47f0-8a25-5a9af73402f3"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[BẢNG KÊ CÁC LOẠI TIỀN LĨNH]]></text>
+			</staticText>
+			<elementGroup>
+				<staticText>
+					<reportElement positionType="Float" stretchType="ElementGroupHeight" x="0" y="53" width="99" height="20" uuid="a2abd788-bfb6-44af-bf2e-c52adfcc7369"/>
+					<textElement>
+						<font fontName="Times New Roman" size="11"/>
+					</textElement>
+					<text><![CDATA[Họ tên người nhận:]]></text>
+				</staticText>
+				<textField textAdjust="StretchHeight">
+					<reportElement positionType="Float" stretchType="ElementGroupHeight" x="99" y="53" width="230" height="20" uuid="e0cf2d25-2ca1-4a0e-8f23-fdc5f707bb35"/>
+					<box rightPadding="2"/>
+					<textElement>
+						<font fontName="Times New Roman" size="11"/>
+					</textElement>
+					<textFieldExpression><![CDATA[($P{fullName}!=null && $P{fullName}.length()>0)?$P{fullName}:""]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement positionType="Float" stretchType="ElementGroupHeight" x="330" y="53" width="78" height="20" uuid="6b73d92d-1717-44f4-b80a-ef07ceea8ce9"/>
+					<textElement>
+						<font fontName="Times New Roman" size="11"/>
+					</textElement>
+					<text><![CDATA[Số GTTT:]]></text>
+				</staticText>
+				<textField textAdjust="StretchHeight">
+					<reportElement positionType="Float" stretchType="ElementGroupHeight" x="408" y="53" width="147" height="20" uuid="99cba3a3-498b-4858-a4c2-7ad4cc81420f"/>
+					<textElement>
+						<font fontName="Times New Roman" size="11"/>
+					</textElement>
+					<textFieldExpression><![CDATA[($P{identifierNumber}!=null && $P{identifierNumber}.length()>0)?$P{identifierNumber}:""]]></textFieldExpression>
+				</textField>
+			</elementGroup>
+			<elementGroup>
+				<staticText>
+					<reportElement positionType="Float" stretchType="ElementGroupHeight" x="0" y="73" width="99" height="20" uuid="64509258-d13c-4545-ac82-089433efce1c"/>
+					<textElement>
+						<font fontName="Times New Roman" size="11"/>
+					</textElement>
+					<text><![CDATA[Địa chỉ:]]></text>
+				</staticText>
+				<textField textAdjust="StretchHeight">
+					<reportElement positionType="Float" stretchType="ElementGroupHeight" x="99" y="73" width="230" height="20" uuid="bde5143d-6b22-4155-8816-b13eb2471fb3"/>
+					<textElement>
+						<font fontName="Times New Roman" size="11"/>
+					</textElement>
+					<textFieldExpression><![CDATA[($P{address}!=null && $P{address}.length()>0)?$P{address}:""]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement positionType="Float" stretchType="ElementGroupHeight" x="330" y="73" width="78" height="20" uuid="9713730c-9210-4f03-aa29-91c820d6a7e7"/>
+					<textElement>
+						<font fontName="Times New Roman" size="11"/>
+					</textElement>
+					<text><![CDATA[Số điện thoại:]]></text>
+				</staticText>
+				<textField textAdjust="StretchHeight">
+					<reportElement positionType="Float" stretchType="ElementGroupHeight" x="408" y="73" width="147" height="20" uuid="a9e3a702-39a7-4a29-bbd4-79a4f30d0316"/>
+					<textElement>
+						<font fontName="Times New Roman" size="11"/>
+					</textElement>
+					<textFieldExpression><![CDATA[($P{phone}!=null&&$P{phone}.length()>0)?$P{phone}:""]]></textFieldExpression>
+				</textField>
+			</elementGroup>
+			<elementGroup>
+				<staticText>
+					<reportElement positionType="Float" stretchType="ElementGroupHeight" x="0" y="93" width="99" height="20" uuid="5e76cd11-1137-40c0-a75d-c5202c687409"/>
+					<textElement>
+						<font fontName="Times New Roman" size="11"/>
+					</textElement>
+					<text><![CDATA[Nội dung:]]></text>
+				</staticText>
+				<textField textAdjust="StretchHeight">
+					<reportElement positionType="Float" stretchType="ElementGroupHeight" isPrintRepeatedValues="false" x="99" y="93" width="455" height="20" uuid="775de3f7-ec17-4143-81ca-0431952be21d"/>
+					<textElement>
+						<font fontName="Times New Roman" size="11"/>
+					</textElement>
+					<textFieldExpression><![CDATA[($P{detailOfPayment}!=null&&$P{detailOfPayment}.length()>0)?$P{detailOfPayment}:""]]></textFieldExpression>
+				</textField>
+			</elementGroup>
+			<elementGroup/>
+			<elementGroup/>
+			<elementGroup>
+				<staticText>
+					<reportElement positionType="Float" stretchType="ElementGroupHeight" x="60" y="254" width="178" height="41" isRemoveLineWhenBlank="true" uuid="8d190b5f-007e-41d4-85f9-0eb4334ccbbe"/>
+					<textElement textAlignment="Center" verticalAlignment="Top" markup="html">
+						<font fontName="Times New Roman" size="11" pdfEncoding=""/>
+					</textElement>
+					<text><![CDATA[<b>Người nhận</b><br>
+	<i>(Ký, ghi rõ họ tên)</i>]]></text>
+				</staticText>
+				<staticText>
+					<reportElement positionType="Float" stretchType="ElementGroupHeight" x="290" y="254" width="190" height="41" uuid="77951a03-597f-440a-b4a1-881a7067c38c"/>
+					<textElement textAlignment="Center" verticalAlignment="Top" markup="html">
+						<font fontName="Times New Roman" size="11"/>
+					</textElement>
+					<text><![CDATA[<b>Người chi tiền</b><br>
+	<i>(Ký, ghi rõ họ tên)</i>]]></text>
+				</staticText>
+			</elementGroup>
+			<elementGroup>
+				<textField textAdjust="StretchHeight">
+					<reportElement positionType="Float" stretchType="ElementGroupHeight" x="290" y="318" width="190" height="30" uuid="700964f6-62d1-4a7c-b71e-bc07e87fb5e1"/>
+					<textElement textAlignment="Center" verticalAlignment="Top">
+						<font fontName="Times New Roman" size="11"/>
+					</textElement>
+					<textFieldExpression><![CDATA[($P{teller}!=null && $P{teller}.length()>0)?$P{teller}:""]]></textFieldExpression>
+				</textField>
+			</elementGroup>
+			<staticText>
+				<reportElement positionType="Float" x="172" y="121" width="172" height="30" uuid="9a871eb0-c5ab-4123-97af-74f44d6d7a24"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Số tờ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="344" y="121" width="211" height="30" uuid="ce2ca2d7-8d1c-4758-8b61-3abd313a1551"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Thành tiền]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="0" y="121" width="172" height="30" uuid="66e0638f-ccee-40d1-a309-4a12435d4e0a"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Mệnh giá]]></text>
+			</staticText>
+			<componentElement>
+				<reportElement positionType="Float" x="0" y="151" width="555" height="28" uuid="343b2705-c862-4ecc-89b1-79b03046d820"/>
+				<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" printOrder="Vertical">
+					<datasetRun subDataset="Dataset1" uuid="b279643b-4813-42eb-ba18-23c34f661827">
+						<dataSourceExpression><![CDATA[$P{listInventory}]]></dataSourceExpression>
+					</datasetRun>
+					<jr:listContents height="28" width="555">
+						<textField>
+							<reportElement x="0" y="0" width="172" height="28" uuid="53b5dc82-44c1-4c60-b85d-31ef9fa7ff3d"/>
+							<box>
+								<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+								<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+								<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+								<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<textElement textAlignment="Right" verticalAlignment="Middle">
+								<font fontName="Times New Roman" size="12"/>
+								<paragraph rightIndent="10" spacingBefore="4"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{menhGia}]]></textFieldExpression>
+						</textField>
+						<textField isBlankWhenNull="true">
+							<reportElement x="172" y="0" width="172" height="28" uuid="1c09c3dc-25e4-4a70-87c4-47a3504917a2"/>
+							<box>
+								<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+								<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+								<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+								<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<textElement textAlignment="Center" verticalAlignment="Middle" markup="html">
+								<font fontName="Times New Roman" size="12" pdfEncoding=""/>
+								<paragraph spacingBefore="4" spacingAfter="2"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{soTo}]]></textFieldExpression>
+						</textField>
+						<textField isBlankWhenNull="true">
+							<reportElement x="344" y="0" width="211" height="28" uuid="4465f36c-d9a5-4c7f-8383-e5dbdbba9a31"/>
+							<box>
+								<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+								<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+								<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+								<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+							</box>
+							<textElement textAlignment="Right" verticalAlignment="Middle" markup="html">
+								<font fontName="Times New Roman" size="12" pdfEncoding=""/>
+								<paragraph lineSpacing="Single" rightIndent="10" spacingBefore="4" spacingAfter="2"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{thanhTien}]]></textFieldExpression>
+						</textField>
+					</jr:listContents>
+				</jr:list>
+			</componentElement>
+			<staticText>
+				<reportElement positionType="Float" x="0" y="179" width="172" height="22" uuid="bb5e2134-f435-48d2-b076-1c6e77103bcb"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Tổng cộng]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement positionType="Float" x="172" y="179" width="383" height="22" uuid="823297d8-1d4e-4f6a-885a-114694faa120"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="true"/>
+					<paragraph rightIndent="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{tongCong}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="0" y="201" width="172" height="22" uuid="d29cc253-8b52-4fbd-aa64-840df12f3e64"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Bằng chữ]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement positionType="Float" x="172" y="201" width="383" height="22" uuid="d4632a9a-fee5-4fa0-b31b-425877f14040"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11" isBold="false"/>
+					<paragraph lineSpacing="Single" rightIndent="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{bangChuCai}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement positionType="Float" x="290" y="233" width="190" height="20" uuid="36dbe7dc-a4a6-4c2e-8088-db53e901f837"/>
+				<box rightPadding="0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{ngayThang}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>
