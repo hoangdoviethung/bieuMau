@@ -1,4 +1,4 @@
-package com.dto;
+package viethung.dto;
 
 import lombok.Getter;
 import lombok.Setter;

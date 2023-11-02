@@ -1,7 +1,7 @@
-package com.rest;
+package viethung.rest;
 
-import com.Service.TransferReserveService;
-import com.dto.ShowModelDTO;
+import viethung.Service.TransferReserveService;
+import viethung.dto.ShowModelDTO;
 import lombok.RequiredArgsConstructor;
 import net.sf.jasperreports.engine.JRException;
 import org.springframework.http.ContentDisposition;

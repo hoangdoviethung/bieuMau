@@ -1,4 +1,4 @@
-package com.dto;
+package viethung.dto;
 
 
 public class Field {
